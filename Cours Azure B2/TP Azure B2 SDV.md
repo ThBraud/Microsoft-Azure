@@ -34,9 +34,9 @@ Ensuite on peut accéder au site en http
 
 # Créer un dossier
 
-![image.png](image%201.png)
+![image.png](Images/image%201.png)
 
-![image.png](image%202.png)
+![image.png](Images/image%202.png)
 
 On peut télécharger tree pour tout voir une fois créer 
 
@@ -108,7 +108,7 @@ Ensuite on cat ce fichier pour copier coller la clé
 cat id_rsa.pub
 ```
 
-![image.png](image%203.png)
+![image.png](Images/image%203.png)
 
 ## Ajout de l’origine
 
@@ -141,19 +141,19 @@ On re push.
 
 Cherche Containers registries
 
-![image.png](image%204.png)
+![image.png](Images/image%204.png)
 
 # Création d’une pipeline
 
 Sur AzureDevOps
 
-![image.png](image%205.png)
+![image.png](Images/image%205.png)
 
-![image.png](image%206.png)
+![image.png](Images/image%206.png)
 
-![image.png](image%207.png)
+![image.png](Images/image%207.png)
 
-![image.png](image%208.png)
+![image.png](Images/image%208.png)
 
 Malheureusement a cause de règle de sécurité, mis en place par nos admins, on ne peut pas le faire. 
 
@@ -161,7 +161,7 @@ On va donc passer par du docker
 
 # Pour passer en SSH sur VS Code
 
-![image.png](image%209.png)
+![image.png](Images/image%209.png)
 
 Puis on ajoute un nouveau SSH par notre commande de connexion classique
 
@@ -250,7 +250,7 @@ Mettre sur Docker Hub
 - Créer un compte puis un repo sur Docker Hub
 - Changer le tag de notre image qu’on veut push, par le nom présent a l’endroit de la capture. C’est comme un nom de commit, pour identifier les versions
 
-![image.png](image%2010.png)
+![image.png](Images/image%2010.png)
 
 La commande est la suivante : 
 
@@ -437,41 +437,41 @@ MARIADB_ROOT_PASSWORD=motdepasseroot@de45248dsdfsd
 
 Puis on va dans les paramètres de notre serveur 
 
-![image.png](image%2011.png)
+![image.png](Images/image%2011.png)
 
 On modifie require secure sur Off
 
-![image.png](image%2012.png)
+![image.png](Images/image%2012.png)
 
 On éteint, on relance sa fonctionne
 
 # Retour à la création de pipeline
 
-![image.png](image%2013.png)
+![image.png](Images/image%2013.png)
 
-![image.png](image%2014.png)
+![image.png](Images/image%2014.png)
 
 On valide 
 
 On obtiens ce dossiers 
 
-![image.png](image%2015.png)
+![image.png](Images/image%2015.png)
 
 on save et run 
 
 # Prérequis clef PAC
 
-![image.png](image%2016.png)
+![image.png](Images/image%2016.png)
 
 On crée notre clés. **Attention il faut la copier sinon on la verra plus** 
 
-![image.png](image%2017.png)
+![image.png](Images/image%2017.png)
 
 # Création de notre Agent Pool
 
-![image.png](image%2018.png)
+![image.png](Images/image%2018.png)
 
-![image.png](image%2019.png)
+![image.png](Images/image%2019.png)
 
 Ensuite on clique sur notre pool, new agent et on exécute les commandes selon notre systèmes d’exploitations. 
 
@@ -499,13 +499,13 @@ Ensuite on lance la config
 /config.sh
 ```
 
-![image.png](image%2020.png)
+![image.png](Images/image%2020.png)
 
 On met les paramètre suivants 
 
 Il faut juste dans agent pool mettre le nom de notre pool d’agent créer juste avant
 
-![image.png](image%2021.png)
+![image.png](Images/image%2021.png)
 
 On lance l’agent avec 
 
@@ -517,7 +517,7 @@ Puis on retourne sur AzureDevOps
 
 On le voit dans notre pool. Dans mon cas je l’ai laissé dans le pool par défaut il faudrait le mettre dans celui précédemment créer. 
 
-![image.png](image%2022.png)
+![image.png](Images/image%2022.png)
 
 Il faut ensuite modifier le fichier azure-pipelines.yaml. On change la partie pool en sa : 
 
@@ -531,7 +531,7 @@ Il faut au préalable un service de connexion dans Azure DevOps mais aussi gén�
 
 Sur Azure DevOps : 
 
-![image.png](image%2023.png)
+![image.png](Images/image%2023.png)
 
 On cherche docker registry. Puis 
 
@@ -541,7 +541,7 @@ Le docker password c’est le token
 
 Apres le nom on met celui qu’on veut. On remettra ce nom la dans notre yaml. 
 
-![image.png](image%2024.png)
+![image.png](Images/image%2024.png)
 
 Changer le azure-pipelines.yaml comme ceci : 
 
@@ -592,16 +592,16 @@ On le commit et c’est fini ! Le build de la pipeline doit donc marcher et sur 
 
 ## Création d’un **Container Apps**
 
-![image.png](image%2025.png)
+![image.png](Images/image%2025.png)
 
 On doit juste choisir le nom et notre région
 
-![image.png](image%2026.png)
+![image.png](Images/image%2026.png)
 
-![image.png](image%2027.png)
+![image.png](Imges/image%2027.png)
 
 Dans l’onglet variables d’environnement on dois mettre nos variables du .env avec exactement le même nom et leur valeur. 
 
-![image.png](image%2028.png)
+![image.png](Images/image%2028.png)
 
 On peut maintenant déployer et créer notre container apps. Une choix cela fait on accède a la ressource, on clique sur le liens donnée par azure et on accède à notre site.
