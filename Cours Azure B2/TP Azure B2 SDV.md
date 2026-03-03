@@ -28,7 +28,7 @@ sudo apt install -y wget curl vim git apache2 php php-mysql default-mysql-client
 
 # Création de règle de port 80
 
-![image.png](image.png)
+![Images/image.png](image.png)
 
 Ensuite on peut accéder au site en http
 
